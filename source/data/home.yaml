@@ -47,6 +47,15 @@
       icon: 'i-monitoring.svg'
       url: '/guides/'
       secondary: true
+  popcards:
+    title: 'Popular Documentation'
+    links:
+      - text: 'WordPress Best Practices'
+        url: '/wordpress-best-practices/'
+        icon: 'icon-manage.svg'
+      - text: 'Terminus Manual'
+        url: '/terminus/'
+        icon: 'terminus-thumbLarge.png'
   three-column-links:
     title: 'Popular Documentation'
     links: 

@@ -5,6 +5,7 @@ import Layout from '../layout/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicsGrid from '../layout/topics-grid';
 import ThreeColumnList from '../layout/three-column-list';
+import PopCards from '../layout/popCards';
 import ChangelogPreview from '../layout/changelog-preview';
 import SEO from "../layout/seo"
 
@@ -37,6 +38,10 @@ class Index extends React.Component {
 								<TopicsGrid topics={homeYaml.topics} />
 							</div>
 						</div>
+						<PopCards
+							title={homeYaml.popcards.title}
+							links={homeYaml.popcards.links}
+						/>
 						<ThreeColumnList
 							title={homeYaml.three_column_links.title}
 							links={homeYaml.three_column_links.links}
@@ -75,14 +80,22 @@ export const pageQuery = graphql`
 				summary
 				icon
 				url
-        secondary
+        		secondary
 			}
 			three_column_links {
 				title
-        links {
-          text
-          url
-        }
+        		links {
+          			text
+          			url
+				}
+			}
+			popcards {
+				title
+				links {
+					text
+					url
+					icon
+				}
 			}
 			changelog_preview {
 				title
