@@ -276,9 +276,6 @@ function is_from_trusted_ip() {
  if ( substr($slashes_removed_uri, 0, 12) == 'wp-login.php' ) {
      // user login page
      $to_lockdown = true;
-   } elseif ( substr($slashes_removed_uri, 0, 8) == 'wp-admin' ) {
-     // admin pages
-     $to_lockdown = true;
    }
    if($to_lockdown && (php_sapi_name() != "cli")){
      header('HTTP/1.0 403 Forbidden');
